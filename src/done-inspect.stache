@@ -1,0 +1,43 @@
+<div id="done-inspect-toolbar" class="done-inspect done-inspect-toolbar {{#if expanded}}expanded{{/if}}"
+    role="region" aria-expanded="{{expanded}}">
+  <div class="done-inspect-toolbar-body">
+    <ul class="done-inspect-plugins">
+      <li>
+        <div class="done-inspect-plugins-separator">Components</div>
+        <ul>
+          <li role="menu-item" class="done-inspect-plugin">
+            <label class="done-inspect-plugin-switch">
+              <input class="done-inspect-plugin-checkbox done-inspect-sr-only" type="checkbox">
+              <div aria-hidden="true" class="done-inspect-plugin-indicator">✓</div>
+              <div class="done-inspect-plugin-info">
+                <div class="done-inspect-plugin-title">Show Names</div>
+                <div class="done-inspect-plugin-description">
+                  Annotation each component on the page with the name of the component
+                </div>
+              </div>
+            </label>
+          </li>
+          <li role="menu-item" class="done-inspect-plugin">
+            <label class="done-inspect-plugin-switch">
+              <input class="done-inspect-plugin-checkbox done-inspect-sr-only" type="checkbox">
+              <div aria-hidden="true" class="done-inspect-plugin-indicator">✓</div>
+              <div class="done-inspect-plugin-info">
+                <div class="done-inspect-plugin-title">Wand</div>
+                <div class="done-inspect-plugin-description">
+                  Hover over components highlighting their dimensions
+                </div>
+              </div>
+            </label>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <button aria-controls="done-inspect-toolbar" class="done-inspect-toolbar-toggle"
+          aria-label="[done-inspect] Toggle menu" 
+          ($click)="toggleExpanded(%event)">
+    <div aria-hidden="true" class="done-inspect-toolbar-logo">
+      <img src="https://raw.githubusercontent.com/donejs/done-inspect/master/src/images/donejs-icon-full-color.png">
+    </div>
+  </button>
+</div>

@@ -1,0 +1,62 @@
+@import "variables.less";
+
+@descriptionWidth: 200px;
+@pluginPadding: 12px;
+@controlMargin: 15px;
+@indicatorSize: 16px;
+@indicatorFontSize: 13px;
+
+.done-inspect-plugin {
+  .done-inspect-no-select;
+  border-bottom: 1px solid @darkBorderColor;
+  list-style: none;
+
+  &-switch {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    padding: @pluginPadding @pluginPadding @pluginPadding 0;
+    margin: 0;
+  }
+
+  &-indicator {
+    margin: 0 @controlMargin;
+  }
+
+  &-indicator {
+    border-radius: @indicatorSize;
+    border: 1px solid @lightBorderColor;
+    color: transparent;
+    font-size: @indicatorFontSize;
+    height: @indicatorSize;
+    line-height: @indicatorSize;
+    padding: 0 0 0 1px;
+    width: @indicatorSize;
+  }
+
+  // Checked styles for the fake checkboxes
+  &-checkbox:checked + &-indicator {
+    background-color: @kaGreen;
+    border-color: @kaGreen;
+    color: white;
+  }
+
+  &-title {
+    font-weight: bold;
+  }
+
+  &-description {
+    font-size: @fontSizeSmall;
+    font-style: italic;
+    width: @descriptionWidth;
+    margin-right: 3px;
+  }
+}
+
+.done-inspect-plugins {
+    &-separator {
+      font-size: 12px;
+      margin: 7px @controlMargin 0;
+      text-transform: uppercase;
+    }
+}
