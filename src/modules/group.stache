@@ -1,0 +1,8 @@
+<li>
+  <div class="done-inspect-plugins-separator">{{group}}</div>
+  <ul>
+    {{#each modules as module}}
+      {{>module.stache}}
+    {{/each}}
+  </ul>
+</li>

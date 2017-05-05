@@ -1,0 +1,19 @@
+<can-component tag="demo-hello-world">
+  <style type="less">
+    display: block;
+    margin: 50 0 0 30;
+    p { font-weight: bold; }
+  </style>
+  <view>
+    <p>{{message}}</p>
+  </view>
+  <script type="view-model">
+    import DefineMap from 'can-define/map/';
+
+    export default DefineMap.extend({
+      message: {
+        value: 'HELLO WORLD'
+      }
+    });
+  </script>
+</can-component>

@@ -51,6 +51,7 @@
       "steal-tools"
     ],
     "plugins": [
+      "done-component",
       "steal-less",
       "steal-stache"
     ],
@@ -64,7 +65,9 @@
     "can-stache": "^3.0.20",
     "can-view-autorender": "^3.0.4",
     "cssify": "^0.6.0",
+    "done-component": "^1.0.0",
     "jquery": "^3.2.1",
+    "lodash": "^4.17.4",
     "steal-less": "^1.2.0",
     "steal-stache": "^3.0.5"
   },
