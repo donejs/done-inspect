@@ -1,7 +1,7 @@
 <li role="menu-item" class="done-inspect-plugin">
   <label class="done-inspect-plugin-switch">
     <input class="done-inspect-plugin-checkbox done-inspect-sr-only" type="checkbox"
-      ($change)="onCheck()">
+      ($change)="onChange()">
     <div aria-hidden="true" class="done-inspect-plugin-indicator">✓</div>
     <div class="done-inspect-plugin-info">
       <div class="done-inspect-plugin-title">{{title}}</div>

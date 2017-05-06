@@ -2,7 +2,7 @@
     role="region" aria-expanded="{{expanded}}">
   <div class="done-inspect-toolbar-body">
     <ul class="done-inspect-plugins">
-      {{{modules}}}
+      {{{renderedGroups}}}
     </ul>
   </div>
   <button aria-controls="done-inspect-toolbar" class="done-inspect-toolbar-toggle"

@@ -1,8 +1,9 @@
 <can-component tag="demo-hello-world">
   <style type="less">
     display: block;
-    margin: 50 0 0 30;
+    margin: 50 0 20 30;
     p { font-weight: bold; }
+    border: 1px dashed pink
   </style>
   <view>
     <p>{{message}}</p>
