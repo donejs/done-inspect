@@ -2,6 +2,8 @@
 import $ from 'jquery';
 import canViewCallbacks from 'can-view-callbacks';
 
+import './show-names.less';
+
 function getTopLeftPosition(el) {
   const styles = window.getComputedStyle(el);
   const bounds = el.getBoundingClientRect();

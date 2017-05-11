@@ -1,4 +1,4 @@
-import showNames from './show-names';
+import showNames from './show-names/';
 
 export default [
   showNames,
