@@ -3,7 +3,6 @@
     display: block;
     margin: 50 0 20 30;
     p { font-weight: bold; }
-    border: 1px dashed pink
   </style>
   <view>
     <p>{{message}}</p>
