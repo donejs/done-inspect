@@ -1,6 +1,6 @@
 {
   "name": "done-inspect",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "An inspection tool for your DoneJS application",
   "homepage": "https://github.com/donejs/done-inspect",
   "repository": {
@@ -37,7 +37,15 @@
     ]
   },
   "keywords": [
-    "donejs-plugin"
+    "browser",
+    "canjs",
+    "devtool",
+    "donejs",
+    "donejs-plugin",
+    "inspector",
+    "javascript",
+    "state-management",
+    "web-development"
   ],
   "steal": {
     "main": "done-inspect",

@@ -4,6 +4,18 @@
 
 An modular inspection tool for your DoneJS application
 
+## Installation
+
+```bash
+npm install --save-dev done-inspect
+```
+
+or 
+
+```bash
+yarn add done-inspect --dev
+```
+
 ## Usage
 
 ### ES6 and CommonJS use
@@ -36,15 +48,16 @@ at this time, one function.
 import './module-name.less';
 
 export default {
-  group: '<string :: The name under which this module will be grouped >',
+  group: '<string :: The group the module belongs to>',
   title: '<string :: The short title shown to the User>',
   description: '<string :: What function the module performs>',
   onChange() {
   /**
    * Currently done-inspect's interface only supports checkboxes.
    *
-   * This function will be called each time the User clicks the module's checkbox.
-   * Therefore, it needs to account for being checked and unchecked.
+   * This function will be called each time the User clicks the
+   * module's checkbox. Therefore, it needs to account for being
+   * checked and unchecked.
    *
    * Personally, I store a state flag in the module object.
    */
