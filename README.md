@@ -1,32 +1,64 @@
 # done-inspect
 
-[![Build Status](https://travis-ci.org/donejs/done-inspect.png?branch=master)](https://travis-ci.org/donejs/done-inspect)
+<!-- [![Build Status](https://travis-ci.org/donejs/done-inspect.png?branch=master)](https://travis-ci.org/donejs/done-inspect) -->
 
-An inspection tool for your DoneJS application
+An modular inspection tool for your DoneJS application
 
 ## Usage
 
-### ES6 use
+### ES6 and CommonJS use
 
-With StealJS, you can import this module directly in a template that is autorendered:
+Use ES6 `import` or CommonJS `require` to load `done-inspect`. After which,
+it can be used in your template.
 
 ```js
+// ES6
 import plugin from 'done-inspect';
-```
 
-### CommonJS use
-
-Use `require` to load `done-inspect` and everything else
-needed to create a template that uses `done-inspect`:
-
-```js
+// CommonJS
 var plugin = require("done-inspect");
 ```
 
-### Standalone use
+Or import it directly into your `can-stache` template with `can-import` and `stealjs`:
 
-Load the `global` version of the plugin:
+```mustache
+<can-import from="done-inspect">
+  <done-inspect />
+</can-import>
+```
 
-```html
-<script src='./node_modules/done-inspect/dist/global/done-inspect.js'></script>
+## Modules
+
+Writing a `done-inspect` module requires an export object with three properties and,
+at this time, one function.
+
+```js
+import './module-name.less';
+
+export default {
+  group: '<string :: The name under which this module will be grouped >',
+  title: '<string :: The short title shown to the User>',
+  description: '<string :: What function the module performs>',
+  onChange() {
+  /**
+   * Currently done-inspect's interface only supports checkboxes.
+   *
+   * This function will be called each time the User clicks the module's checkbox.
+   * Therefore, it needs to account for being checked and unchecked.
+   *
+   * Personally, I store a state flag in the module object.
+   */
+  },
+};
+```
+
+### Style Naming Conventions
+
+In order to reduce the change of style conflict, I use the following class
+name convention:
+
+```css
+.done-inspect-module-name-class-name {
+  // ALL THE STYLES
+}
 ```
