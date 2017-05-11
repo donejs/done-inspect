@@ -48,4 +48,4 @@ export default {
       $('.done-inspect-show-name-label').remove();
     }
   },
-}
+};
