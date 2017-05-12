@@ -26,9 +26,9 @@ export const viewModel = DefineMap.extend({
   },
   renderedGroups: {
     get() {
-      const modules = (this.options && this.options.modules)
-        ? moduleDefinitions.concat(this.options.modules)
-        : moduleDefinitions;
+      const modules = (this.options && this.options.modules) ? 
+        moduleDefinitions.concat(this.options.modules) : 
+        moduleDefinitions;
       const groups = _.groupBy(modules, 'group');
 
       const fragment = document.createDocumentFragment();
