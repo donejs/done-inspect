@@ -28,7 +28,7 @@ it can be used in your template.
 import plugin from 'done-inspect';
 
 // CommonJS
-var plugin = require("done-inspect");
+var plugin = require('done-inspect');
 ```
 
 Or import it directly into your `can-stache` template with `can-import` and `stealjs`:
@@ -37,7 +37,7 @@ Or import it directly into your `can-stache` template with `can-import` and `ste
 <can-import from="done-inspect" />
 <done-inspect />
 
-{!-- We can also pass in options --}
+{{!-- We can also pass in options --}}
 <done-inspect {options}="inspectOptions" />
 ```
 
@@ -52,8 +52,18 @@ of a module.
 
 ## Modules
 
-Writing a `done-inspect` module requires an export object with three properties and,
-at this time, one function.
+### Builtin Modules
+
+Two modules come with the current version of `done-inspect`:
+* __Select Wand__ - Allows the User to hover over the application's custom components and outline
+them. In future versions, this selection will also include the ability to inspect and change
+the components internal state.
+* __Show Names__ - Turning the module on will place labels by all of the application's custom
+components, showing their tag names.
+
+### Writing Custom Modules
+
+Writing a `done-inspect` module requires an exported object with three properties and one function.
 
 ```js
 import './module-name.less';
@@ -69,8 +79,6 @@ export default {
    * This function will be called each time the User clicks the
    * module's checkbox. Therefore, it needs to account for being
    * checked and unchecked.
-   *
-   * Personally, I store a state flag in the module object.
    */
   },
 };
