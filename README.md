@@ -34,10 +34,21 @@ var plugin = require("done-inspect");
 Or import it directly into your `can-stache` template with `can-import` and `stealjs`:
 
 ```mustache
-<can-import from="done-inspect">
-  <done-inspect />
-</can-import>
+<can-import from="done-inspect" />
+<done-inspect />
+
+{!-- We can also pass in options --}
+<done-inspect {options}="inspectOptions" />
 ```
+
+## Options
+
+The `options` parameter is expected to be an object and accepts only two properties: 
+`expanded` and `modules`.
+
+* `expanded` is a boolean and expects `true` or `false` as values
+* `modules` is expected to be an `Array` of `Object` where each object matches the interface
+of a module.
 
 ## Modules
 

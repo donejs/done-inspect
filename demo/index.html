@@ -1,5 +1,8 @@
-<script type="text/stache" can-autorender>
+<script type="text/stache" id="demo" can-autorender>
   <can-import from="done-inspect/" />
+<!--
+  <done-inspect {options}="options" />
+-->
   <done-inspect />
 
   <can-import from="demo/hello-world.component" />
@@ -9,4 +12,15 @@
 
   <demo-hello-world />
 </script>
-<script src="../node_modules/steal/steal.js" main="can-view-autorender"></script>
+<script src="../node_modules/steal/steal.js" main="can-view-autorender">
+  import $ from 'jquery';
+  import autorender from 'can-view-autorender';
+  import viewModel from 'can-view-model';
+
+  const vm = viewModel($('#demo')[0]);
+  autorender(() => {
+    vm.attr('options', {
+      
+    });
+  });
+</script>
