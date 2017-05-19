@@ -1,3 +1,19 @@
-.done-inspect-show-name-label {
-  color: pink;
+.done-inspect-show-names-label {
+  background-color: rgb(255, 232, 0);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: default;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  padding: 3px;
+  position: absolute;
+  z-index: 9997;
+  &-error {
+    background-color: rgb(255, 174, 174);
+  }
+  &-success {
+    background-color: #b9eda9;
+  }
+  &-warning {
+    background-color: rgb(255, 232, 0);
+  }
 }

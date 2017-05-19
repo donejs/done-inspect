@@ -9,7 +9,7 @@ function getTopLeftPosition(el) {
   const bounds = el.getBoundingClientRect();
   return {
     left: el.offsetLeft,
-    top: Math.abs(bounds.top - parseFloat(styles.marginTop) + 18), 
+    top: Math.abs(bounds.top - parseFloat(styles.marginTop) + 18),
   };
 }
 
@@ -19,7 +19,7 @@ function addLabelToDocument(tag, positions) {
     div.style.position = 'absolute';
     div.style.top = position.top;
     div.style.left = position.left;
-    div.className = 'done-inspect-show-name-label';
+    div.className = 'done-inspect-show-names-label';
     div.textContent = tag;
     document.body.appendChild(div);
   });
@@ -45,7 +45,7 @@ export default {
           addLabelToDocument(t, positions);
         });
     } else {
-      $('.done-inspect-show-name-label').remove();
+      $('.done-inspect-show-names-label').remove();
     }
   },
 };
