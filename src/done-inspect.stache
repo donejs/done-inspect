@@ -2,11 +2,18 @@
     role="region" aria-expanded="{{expanded}}">
   <div class="done-inspect-toolbar-body">
     <ul class="done-inspect-plugins">
+      {{#if title}}
+        <li role="menu-item" class="done-inspect-plugin">
+          <label class="done-inspect-plugin-application-title">
+            <div class="done-inspect-plugins-separator">{{title}}</div>
+          </label>
+        </li>
+      {{/if}}
       {{{renderedGroups}}}
     </ul>
   </div>
   <button aria-controls="done-inspect-toolbar" class="done-inspect-toolbar-toggle"
-          aria-label="[done-inspect] Toggle menu" 
+          aria-label="[done-inspect] Toggle menu"
           ($click)="toggleExpanded(%event)">
     <div aria-hidden="true" class="done-inspect-toolbar-logo">
       <img src="https://raw.githubusercontent.com/donejs/done-inspect/master/src/images/donejs-icon-full-color.png">

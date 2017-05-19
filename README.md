@@ -10,7 +10,7 @@ An modular inspection tool for your DoneJS application
 npm install --save-dev done-inspect
 ```
 
-or 
+or
 
 ```bash
 yarn add done-inspect --dev
@@ -37,18 +37,24 @@ Or import it directly into your `can-stache` template with `can-import` and `ste
 <can-import from="done-inspect" />
 <done-inspect />
 
-{{!-- We can also pass in options --}}
-<done-inspect {options}="inspectOptions" />
+{{!-- With configuration options and an application title --}}
+<done-inspect {options}="anObject" {title}="aString" />
 ```
 
-## Options
+### Options
 
-The `options` parameter is expected to be an object and accepts only two properties: 
+The `options` parameter is expected to be an object and accepts only two properties:
 `expanded` and `modules`.
 
 * `expanded` is a boolean and expects `true` or `false` as values
 * `modules` is expected to be an `Array` of `Object` where each object matches the interface
 of a module.
+
+### Title
+
+The `title` parameter take a string and will be displayed at the top of the inspector. The idea
+for this was to display the package.json's `name + version` at the top of the inspector but
+any string is accepted.
 
 ## Modules
 
