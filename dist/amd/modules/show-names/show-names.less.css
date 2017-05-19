@@ -1,0 +1,20 @@
+/*done-inspect@0.0.5#modules/show-names/show-names.less!steal-less@1.2.0#less*/
+.done-inspect-show-names-label {
+  background-color: #ffe800;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: default;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  padding: 3px;
+  position: absolute;
+  z-index: 9997;
+}
+.done-inspect-show-names-label-error {
+  background-color: #ffaeae;
+}
+.done-inspect-show-names-label-success {
+  background-color: #b9eda9;
+}
+.done-inspect-show-names-label-warning {
+  background-color: #ffe800;
+}
