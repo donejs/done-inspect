@@ -5,11 +5,10 @@ import canViewCallbacks from 'can-view-callbacks';
 import './show-names.less';
 
 function getTopLeftPosition(el) {
-  const styles = window.getComputedStyle(el);
   const bounds = el.getBoundingClientRect();
   return {
-    left: el.offsetLeft,
-    top: Math.abs(bounds.top - parseFloat(styles.marginTop) + 18),
+    left: bounds.left,
+    top: (bounds.top === 0) ? bounds.top : bounds.top - 22,
   };
 }
 
@@ -17,8 +16,8 @@ function addLabelToDocument(tag, positions) {
   positions.map((position) => {
     const div = document.createElement('div');
     div.style.position = 'absolute';
-    div.style.top = position.top;
-    div.style.left = position.left;
+    div.style.top = `${position.top}px`;
+    div.style.left = `${position.left}px`;
     div.className = 'done-inspect-show-names-label';
     div.textContent = tag;
     document.body.appendChild(div);
@@ -28,7 +27,7 @@ function addLabelToDocument(tag, positions) {
 export default {
   group: 'components',
   title: 'Show Names',
-  description: 'Annotation each component on the page with the name of the component',
+  description: 'Annotate each component on the page with the name of the component',
   onChange() {
     this.checked = !this.checked;
     if (this.checked) {
