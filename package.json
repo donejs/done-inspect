@@ -1,6 +1,6 @@
 {
   "name": "done-inspect",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "An inspection tool for your DoneJS application",
   "homepage": "https://github.com/donejs/done-inspect",
   "repository": {
