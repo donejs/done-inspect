@@ -1,0 +1,163 @@
+/*done-inspect@0.0.7#done-inspect.less!steal-less@1.2.0#less*/
+.done-inspect-dark-color-scheme {
+  background-color: #333;
+  color: #f2f2f2;
+}
+.done-inspect-no-select {
+  user-select: none;
+}
+/**
+ * Base styles for done-inspect to make sure things look consistent under
+ * reasonable circumstances.
+ */
+.done-inspect,
+.done-inspect * {
+  border: none;
+  background-color: inherit;
+  box-sizing: border-box;
+  color: #f2f2f2;
+  font-family: Arial;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.35;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  text-shadow: none;
+}
+.done-inspect * {
+  height: auto;
+  width: auto;
+}
+.done-inspect strong {
+  font-weight: bold;
+}
+.done-inspect pre,
+.done-inspect code {
+  background-color: #ddd;
+  border: none;
+  border-radius: 0;
+  color: inherit;
+  font-family: monospace;
+  font-size: inherit;
+  line-height: inherit;
+}
+.done-inspect pre {
+  padding: 5px 10px;
+  margin: 0 0 10px;
+  overflow-x: scroll;
+}
+.done-inspect code {
+  border-radius: 2px;
+  display: inline;
+  padding: 1px;
+}
+.done-inspect i,
+.done-inspect em {
+  font-style: italic;
+}
+.done-inspect p {
+  margin: 0 0 10px;
+}
+.done-inspect a,
+.done-inspect a:hover,
+.done-inspect a:focus {
+  background-color: inherit;
+  color: inherit;
+  text-decoration: none;
+}
+.done-inspect-plugin {
+  user-select: none;
+  border-bottom: 1px solid #555;
+  list-style: none;
+}
+.done-inspect-plugin-application-title {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 12px 12px 12px 0;
+  margin: 0;
+}
+.done-inspect-plugin-switch {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  padding: 12px 12px 12px 0;
+  margin: 0;
+}
+.done-inspect-plugin-indicator {
+  margin: 0 15px;
+}
+.done-inspect-plugin-indicator {
+  border-radius: 16px;
+  border: 1px solid #999;
+  color: transparent;
+  font-size: 13px;
+  height: 16px;
+  line-height: 16px;
+  padding: 0 0 0 1px;
+  width: 16px;
+}
+.done-inspect-plugin-checkbox:checked + .done-inspect-plugin-indicator {
+  background-color: #639b24;
+  border-color: #639b24;
+  color: white;
+}
+.done-inspect-plugin-title {
+  font-weight: bold;
+}
+.done-inspect-plugin-description {
+  font-size: 11px;
+  width: 200px;
+  margin-right: 3px;
+}
+.done-inspect-plugins-separator {
+  font-size: 12px;
+  margin: 7px 15px 0;
+  text-transform: uppercase;
+}
+.done-inspect-toolbar {
+  background-color: #333;
+  color: #f2f2f2;
+  position: fixed;
+  top: auto;
+  right: auto;
+  bottom: 0;
+  left: 10px;
+  overflow: hidden;
+  z-index: 9998;
+}
+.done-inspect-toolbar-toggle {
+  background-color: #333;
+  display: block;
+  padding: 7px;
+  width: 100%;
+}
+.done-inspect-toolbar-toggle:focus {
+  outline: none;
+}
+.done-inspect-toolbar-logo {
+  height: 25px;
+  text-align: center;
+  width: 35px;
+}
+.done-inspect-toolbar-logo img {
+  height: 25px;
+}
+.done-inspect-toolbar-body {
+  display: none;
+}
+.done-inspect-toolbar.expanded .done-inspect-toolbar-body {
+  display: block;
+}
+.done-inspect-sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
