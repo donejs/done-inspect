@@ -1,6 +1,6 @@
 # done-inspect
 
-<!-- [![Build Status](https://travis-ci.org/donejs/done-inspect.png?branch=master)](https://travis-ci.org/donejs/done-inspect) -->
+<!-- [![Build Status](https://travis-ci.org/donejs/done-inspect.png?branch=master)](https://travis-ci.org/donejs/done-inspect) [![Greenkeeper badge](https://badges.greenkeeper.io/donejs/done-inspect.svg)](https://greenkeeper.io/) -->
 
 An modular inspection tool for your DoneJS application
 
